@@ -1,0 +1,77 @@
+.money-details-container {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+  min-width: 0; /* prevents overflow for long amounts */
+}
+
+.detail-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.detail-text { display: flex; flex-direction: column; }
+
+.detail-text .label {
+  margin: 0;
+  font-size: 12px;
+  color: #475569;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.detail-text .amount {
+  margin: 4px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b69ff;
+  word-break: break-word;
+}
+
+.balance {
+  background-color: #f0fff4;
+  border-color: #34d399;
+}
+
+.income {
+  background-color: #f0f9ff;
+  border-color: #60a5fa;
+}
+
+.expenses {
+  background-color: #faf5ff;
+  border-color: #a78bfa;
+}
+
+@media (max-width: 900px) {
+  .money-details-container { gap: 12px; }
+  .detail-item { padding: 14px; }
+  .detail-text .amount { font-size: 16px; }
+}
+
+@media (max-width: 520px) {
+  .money-details-container { flex-direction: column; }
+  .detail-item {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .detail-item img { width: 40px; height: 40px; }
+  .detail-text .label { font-size: 11px; }
+  .detail-text .amount { font-size: 16px; }
+}
